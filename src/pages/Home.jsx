@@ -53,7 +53,7 @@ export default function Home() {
 
 const styles = {
   title: {
-  fontSize: "40px",
+  fontSize: "30px",
   marginBottom: "10px"
 },
 
