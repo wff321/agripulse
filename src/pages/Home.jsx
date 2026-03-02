@@ -16,47 +16,68 @@ export default function Home() {
     </div>
 
     {/* Welcome Section */}
-    <div style={styles.welcome}>
-      <h1>Welcome to AgriPulse</h1>
-      <p>Your AI Farming Assistant</p>
-    </div>
+   <div style={styles.welcome}>
+  <h1 style={styles.title}>
+  <span style={styles.light}>Welcome to </span>
+  <span style={styles.bold}>AgriPulse</span>
+</h1>
+  <p>Your AI Farming Assistant</p>
+  <p style={styles.arabic}>
+    مساعدك الذكي للزراعة
+  </p>
+</div>
 
-    {/* Cards */}
-    <div style={styles.card} onClick={() => navigate("/scan")}>
-      🔍 Plant Disease Scan
-    </div>
+{/* Cards */}
+<div style={styles.card} onClick={() => navigate("/scan")}>
+  <div style={styles.cardTitle}>Plant Disease Scan</div>
+  <div style={styles.cardArabic}>فحص أمراض النباتات</div>
+</div>
 
-    <div style={styles.card} onClick={() => navigate("/irrigation")}>
-      💧 Irrigation Advice
-    </div>
+<div style={styles.card} onClick={() => navigate("/irrigation")}>
+  <div style={styles.cardTitle}>Irrigation Advice</div>
+  <div style={styles.cardArabic}>نصائح الري</div>
+</div>
 
-    <div style={styles.card} onClick={() => navigate("/market")}>
-      📈 Market Prices
-    </div>
+<div style={styles.card} onClick={() => navigate("/market")}>
+  <div style={styles.cardTitle}>Market Prices</div>
+  <div style={styles.cardArabic}>أسعار السوق</div>
+</div>
 
-    <div style={styles.card} onClick={() => navigate("/crops")}>
-      🌾 Crop Recommendation
-    </div>
-
-  </div>
+<div style={styles.card} onClick={() => navigate("/crops")}>
+  <div style={styles.cardTitle}>Crop Recommendation</div>
+  <div style={styles.cardArabic}>توصيات المحاصيل</div>
+</div>
+</div>
 );
 }
 
 const styles = {
+  title: {
+  fontSize: "40px",
+  marginBottom: "10px"
+},
+
+light: {
+  fontWeight: "300"
+},
+
+bold: {
+  fontWeight: "700"
+},
   container: {
     minHeight: "100vh",
-    backgroundColor: "#F5F1E6",
+    backgroundColor: "#ede7d6",
     paddingBottom: "90px"
   },
 
 header: {
-  backgroundColor: "#1F4D3A",
+  backgroundColor: "#1f342d",
   paddingTop: "45px",
-  paddingBottom: "60px",
+  paddingBottom: "30px",
   textAlign: "center",
   color: "white",
-  borderBottomLeftRadius: "50% 50px",
-  borderBottomRightRadius: "50% 50px"
+borderBottomLeftRadius: "50% 50px",
+borderBottomRightRadius: "50% 50px"
 },
 
   logoContainer: {
@@ -88,18 +109,20 @@ header: {
   welcome: {
     textAlign: "center",
     marginTop: "35px",
-    marginBottom: "25px"
+    marginBottom: "25px", 
+    color: "#1F4D3A"
   },
 
   card: {
-    backgroundColor: "white",
+    backgroundColor: "#f7f2e2",
     margin: "15px 20px",
     padding: "20px",
     borderRadius: "18px",
-    boxShadow: "0 6px 15px rgba(0,0,0,0.08)",
+    boxShadow: "0 6px 15px #1f342d",
     fontSize: "18px",
     fontWeight: "500",
     cursor: "pointer",
-    transition: "0.2s"
+    transition: "0.2s", 
+    color: "#1f342d"
   }
 };
