@@ -7,9 +7,12 @@ export default function Home() {
     <div style={styles.container}>
       
       {/* Header */}
-      <div style={styles.header}>
-        <h2 style={styles.logo}>🌿 AgriPulse</h2>
-      </div>
+     <div style={styles.header}>
+  <div style={styles.logoContainer}>
+    <div style={styles.logoIcon}>🌱</div>
+    <h2 style={styles.logoText}>AgriPulse</h2>
+  </div>
+</div>
 
       {/* Welcome Section */}
       <div style={styles.welcome}>
@@ -42,32 +45,60 @@ const styles = {
   container: {
     minHeight: "100vh",
     backgroundColor: "#F5F1E6",
-    paddingBottom: "40px"
+    paddingBottom: "90px"
   },
+
   header: {
     backgroundColor: "#1F4D3A",
-    padding: "20px",
-    color: "white",
+    paddingTop: "50px",
+    paddingBottom: "40px",
+    borderBottomLeftRadius: "40px",
+    borderBottomRightRadius: "40px",
     textAlign: "center",
-    borderBottomLeftRadius: "20px",
-    borderBottomRightRadius: "20px"
+    color: "white"
   },
-  logo: {
-    margin: 0
+
+  logoContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "12px"
   },
+
+  logoIcon: {
+    width: "48px",
+    height: "48px",
+    borderRadius: "50%",
+    backgroundColor: "white",
+    color: "#1F4D3A",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontSize: "22px",
+    fontWeight: "bold"
+  },
+
+  logoText: {
+    fontSize: "24px",
+    fontWeight: "600",
+    letterSpacing: "0.5px"
+  },
+
   welcome: {
     textAlign: "center",
-    marginTop: "30px",
-    marginBottom: "30px"
+    marginTop: "35px",
+    marginBottom: "25px"
   },
+
   card: {
     backgroundColor: "white",
     margin: "15px 20px",
-    padding: "18px",
-    borderRadius: "15px",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+    padding: "20px",
+    borderRadius: "18px",
+    boxShadow: "0 6px 15px rgba(0,0,0,0.08)",
     fontSize: "18px",
     fontWeight: "500",
-    cursor: "pointer"
+    cursor: "pointer",
+    transition: "0.2s"
   }
 };
