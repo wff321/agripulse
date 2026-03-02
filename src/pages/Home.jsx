@@ -1,44 +1,45 @@
 import { useNavigate } from "react-router-dom";
+import Logo from "../components/Logo";
 
 export default function Home() {
   const navigate = useNavigate();
 
   return (
-    <div style={styles.container}>
-      
-      {/* Header */}
-     <div style={styles.header}>
-  <div style={styles.logoContainer}>
-    <div style={styles.logoIcon}>🌱</div>
-    <h2 style={styles.logoText}>AgriPulse</h2>
-  </div>
-</div>
+  <div style={styles.container}>
 
-      {/* Welcome Section */}
-      <div style={styles.welcome}>
-        <h1>Welcome to AgriPulse</h1>
-        <p>Your AI Farming Assistant</p>
+    {/* Header */}
+    <div style={styles.header}>
+      <div style={styles.logoContainer}>
+        <Logo size={50} />
+        <h2 style={styles.logoText}>AgriPulse</h2>
       </div>
-
-      {/* Cards */}
-      <div style={styles.card} onClick={() => navigate("/scan")}>
-        🔍 Plant Disease Scan
-      </div>
-
-      <div style={styles.card} onClick={() => navigate("/irrigation")}>
-        💧 Irrigation Advice
-      </div>
-
-      <div style={styles.card} onClick={() => navigate("/market")}>
-        📈 Market Prices
-      </div>
-
-      <div style={styles.card} onClick={() => navigate("/crops")}>
-        🌾 Crop Recommendation
-      </div>
-
     </div>
-  );
+
+    {/* Welcome Section */}
+    <div style={styles.welcome}>
+      <h1>Welcome to AgriPulse</h1>
+      <p>Your AI Farming Assistant</p>
+    </div>
+
+    {/* Cards */}
+    <div style={styles.card} onClick={() => navigate("/scan")}>
+      🔍 Plant Disease Scan
+    </div>
+
+    <div style={styles.card} onClick={() => navigate("/irrigation")}>
+      💧 Irrigation Advice
+    </div>
+
+    <div style={styles.card} onClick={() => navigate("/market")}>
+      📈 Market Prices
+    </div>
+
+    <div style={styles.card} onClick={() => navigate("/crops")}>
+      🌾 Crop Recommendation
+    </div>
+
+  </div>
+);
 }
 
 const styles = {
@@ -48,22 +49,22 @@ const styles = {
     paddingBottom: "90px"
   },
 
-  header: {
-    backgroundColor: "#1F4D3A",
-    paddingTop: "50px",
-    paddingBottom: "40px",
-    borderBottomLeftRadius: "40px",
-    borderBottomRightRadius: "40px",
-    textAlign: "center",
-    color: "white"
-  },
+header: {
+  backgroundColor: "#1F4D3A",
+  paddingTop: "45px",
+  paddingBottom: "60px",
+  textAlign: "center",
+  color: "white",
+  borderBottomLeftRadius: "50% 50px",
+  borderBottomRightRadius: "50% 50px"
+},
 
   logoContainer: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "12px"
-  },
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  gap: "14px"
+},
 
   logoIcon: {
     width: "48px",
